@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Testpage - ui5lab.lightbox.LightBox</title>
+
+	<script id="sap-ui-bootstrap"
+		src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+		data-sap-ui-libs="ui5lab.lightbox"
+		data-sap-ui-theme="sap_belize"
+		data-sap-ui-resourceroots='{"ui5lab.lightbox": "./ui5lab/lightbox"}'>
+	</script>
+
+
+	<script>
+		sap.ui.getCore().attachInit(function () {
+			
+			// create instance of LightBox
+			var oLightBox = new ui5lab.lightbox.LightBox({
+				width: '100%',
+				height: 'auto',
+				images: [{src: "https://www.w3schools.com/howto/img_nature_wide.jpg", description: 'Nature'}, 
+						 {src: "https://www.w3schools.com/howto/img_snow_wide.jpg", description: 'Snow'},
+						 {src: "https://www.w3schools.com/howto/img_mountains_wide.jpg", description: 'Mountains'},
+						 {src: "https://www.w3schools.com/howto/img_lights_wide.jpg", description: 'Lights'},
+						 {src: "https://www.w3schools.com/howto/img_mountains_wide.jpg", description: 'Mountains'},
+						 {src: "https://www.w3schools.com/howto/img_lights_wide.jpg", description: 'Lights'},
+						 {src: "https://www.w3schools.com/howto/img_mountains_wide.jpg", description: 'Mountains'},
+						 {src: "https://www.w3schools.com/howto/img_lights_wide.jpg", description: 'Lights'}]
+			});
+			
+			// Place in the HTML
+			oLightBox.placeAt("content");
+		});
+	</script>
+</head>
+<body id="content" class="sapUiBody" style="height:100vh; width:100vw;">
+</body>
+</html>
